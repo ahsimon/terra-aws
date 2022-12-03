@@ -6,7 +6,7 @@
 ## Prerequisites: Installing and configuring Terraform
 Please review the [Terraform Documentation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli?in=terraform%2Faws-get-started)
 
-Installing in Ubuntu/Debian
+1. Installing in Ubuntu/Debian
 
 ```sh
   sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
@@ -32,3 +32,22 @@ Installing in Ubuntu/Debian
 ```sh  
   sudo apt-get install terraform
 ```
+
+2. Setup an AWS Account
+
+* Sing up on https://aws.amazon.com
+* Go to [IAM Console](https://amzn.to/33fM2jf)
+* Add a user with Access key - Programmatic access
+* Set AdministratorAcces privileges to this user
+
+3. Configure your terminal with
+
+```sh
+  export AWS_ACCESS_KEY_ID=(aws access key id)
+  export AWS_SECRET_ACCES_KEY=(aws secret access key)
+```
+
+## Basic Scenarios
+[Deploying a Docker Image](/Docker)
+
+
