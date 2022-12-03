@@ -40,7 +40,7 @@ Please review the [Terraform Documentation](https://developer.hashicorp.com/terr
 * Add a user with Access key - Programmatic access
 * Set `AdministratorAccess` privileges to this user
 
-1. Configure AWS env vars
+3. Configure AWS env vars
 
 ```sh
   export AWS_ACCESS_KEY_ID=(aws access key id)
@@ -49,6 +49,6 @@ Please review the [Terraform Documentation](https://developer.hashicorp.com/terr
 
 ## Basic Scenarios
 
-[Deploying a Docker Image](/docker/main.tf)
+[Deploying a Docker Image](/docker/docker.md)
 
 [Deploying a Simple Server](/simple/simple.md)
