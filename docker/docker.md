@@ -1,7 +1,9 @@
 # Docker Server
 
 [Terraform documentation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli?in=terraform%2Faws-get-started)
-```sh
+
+[main.tf](main.tf)
+```sh 
 terraform {
   required_providers {
     docker = {
