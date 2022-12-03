@@ -38,9 +38,9 @@ Please review the [Terraform Documentation](https://developer.hashicorp.com/terr
 * Sing up on https://aws.amazon.com
 * Go to [IAM Console](https://amzn.to/33fM2jf)
 * Add a user with Access key - Programmatic access
-* Set AdministratorAcces privileges to this user
+* Set `AdministratorAccess` privileges to this user
 
-3. Configure your terminal with
+1. Configure AWS env vars
 
 ```sh
   export AWS_ACCESS_KEY_ID=(aws access key id)
@@ -48,6 +48,7 @@ Please review the [Terraform Documentation](https://developer.hashicorp.com/terr
 ```
 
 ## Basic Scenarios
-[Deploying a Docker Image](/Docker)
 
+[Deploying a Docker Image](/docker/main.tf)
 
+[Deploying a Simple Server](/simple/simple.md)
