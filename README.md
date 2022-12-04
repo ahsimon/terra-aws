@@ -5,11 +5,11 @@
 ## Terraform Cheat Sheet
 | Command |  Description|
 | --- | --- |
-| ```terraform init```|  Its the first command you need to execute. Unless, terraform play, apply, destroy and import will not work <br>The command **terraform init** will install: <ul><li>terraform modules</li><li>eventually a backend</li><li>providers plugins</li></ul>|
-| ```terraform get``` | This command is useful when you have defined some modules. Modules are vendored so when you edit them, you need to get again modules content. <br>When you use modules, the fist thing you have to do is  **terraform get** This pulls modules into the .terraform directory. Once you do that, unless you do another ```terraform get -update true```, you've essentially vendored those modules| 
-| ```terraform plan``` | The **plan** step checks configuration to execute and write a plan to apply to target infrastructure provider. <br> Its important feature of terraform that allows a user to see which actions terraform will perform, prior to making any changes, increasing confidence that a change will have the desired effect once applied|
-| ```terraform apply``` | Now you have the desired state, so you can execute the **plan** <br> Since terraform v0.11+ in an interactive mode, you can just execute ```terraform apply``` command which will print out which actions TF will perform.<br>By generating the plan and applying it in the same command, terraform can guarantee that the execution plan won´t change without to needed to write it to disk. This reduces the risk of potentially sensitive data being left behind or accidentally checked into version control  |
-```terraform destroy``` |destroy all resources|
+| `terraform init`|  Its the first command you need to execute. Unless, terraform play, apply, destroy and import will not work <br>The command **terraform init** will install: <ul><li>terraform modules</li><li>eventually a backend</li><li>providers plugins</li></ul>|
+| `terraform get` | This command is useful when you have defined some modules. Modules are vendored so when you edit them, you need to get again modules content. <br>When you use modules, the fist thing you have to do is  **terraform get** This pulls modules into the .terraform directory. Once you do that, unless you do another ```terraform get -update true```, you've essentially vendored those modules| 
+| `terraform plan` | The **plan** step checks configuration to execute and write a plan to apply to target infrastructure provider. <br> Its important feature of terraform that allows a user to see which actions terraform will perform, prior to making any changes, increasing confidence that a change will have the desired effect once applied|
+| `terraform apply` | Now you have the desired state, so you can execute the **plan** <br> Since terraform v0.11+ in an interactive mode, you can just execute `terraform apply` command which will print out which actions TF will perform.<br>By generating the plan and applying it in the same command, terraform can guarantee that the execution plan won´t change without to needed to write it to disk. This reduces the risk of potentially sensitive data being left behind or accidentally checked into version control  |
+`terraform destroy` |destroy all resources|
 
 
 ### Examples
