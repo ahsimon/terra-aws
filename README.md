@@ -94,8 +94,8 @@ Please review the [Terraform Documentation](https://developer.hashicorp.com/terr
 3. Configure AWS env vars
 
 ```sh
-  export AWS_ACCESS_KEY_ID=(aws access key id)
-  export AWS_SECRET_ACCES_KEY=(aws secret access key)
+export AWS_ACCESS_KEY_ID=(aws access key id)
+export AWS_SECRET_ACCESS_KEY=(aws secret access key)
 ```
 
 ## Basic Scenarios
