@@ -75,3 +75,39 @@ terraform apply
 
 Then click your new Instance, you can find its public IP address in tab Networking, to test the server execute: <br>
 ```curl http://<EC2_INSTANCE_PUBLIC_IP>:8080```
+<br>
+
+
+## Variables
+
+To allow you to make your code more DRY and more configurable, Terraform allows you to define input variables: 
+```sh
+variable "NAME" {
+  [CONFIG ...]
+}
+```
+Sintaxis:  ```var.<VARIABLE_NAME>```
+<br>
+Parameters:
+
+```description``` Use this parameter to document how a variable is used. You will be able to see this description not only while reading the code but also when running the plan or apply commands 
+
+```default``` There are a number of ways to provide a value for the variable, including passing it in at the command line like using the -var option:
+
+```sh
+terraform plan -var "server_port=8080"
+```
+
+Via a file using the -var-file option, or via an environment variable. Terraform looks for environment variables of the name ```TF_VAR_<variable_name>```:
+```sh
+export TF_VAR_server_port=8080
+terraform plan
+```
+
+ If no value is passed in, the variable will fall back to this default value. If there is no default value, Terraform will interactively prompt the user for one
+
+```type``` This allows you to enforce type constraints on the variables. Terraform supports a number of type constraints: string, number, bool, list, map, set, object, tuple, and any. If you don’t specify a type, Terraform assumes the type is any
+
+```validation``` This allows you to define custom validation rules for the input variable, such as enforcing minimum or maximum values on a number
+
+```sensitive``` If you set this parameter to true on an input variable, Terraform will not log it when you run plan or apply. You  use this on: passwords, API keys, etc.
