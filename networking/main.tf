@@ -266,6 +266,7 @@ resource "aws_network_acl_association" "public-traffic-c" {
 }
 
 
+
 resource "aws_security_group" "alb-api" {
   name        = "alb-api"
   description = "Application  load balancer security"
@@ -290,15 +291,15 @@ resource "aws_security_group" "alb-api" {
   }
 
 
-  egress {
-    from_port        = 1024
-    to_port          = 65535
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
-    security_groups  =  ["sg-05d320a7f94505b62"]
-  }
-
   tags = {
     Name = "alb-api"
   }
 }
+
+
+# resource "aws_vpc_peering_connection" "microservices-to-datastores" {
+#   peer_owner_id = var.peer_owner_id
+#   peer_vpc_id   = aws_vpc.microservices.id
+#   vpc_id        = aws_vpc.datastores.id
+
+# }
