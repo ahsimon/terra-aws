@@ -108,4 +108,4 @@ export AWS_SECRET_ACCESS_KEY=(aws secret access key)
 
 [Deploying a HTTP Server](/httpserver/httpserver.md)
 
-[Production Ready Cloud Infrastructure](/cloud-infra/cloud.md)
+[Production Ready Cloud Infrastructure](/cloud-infra/cloud-infra.md)
